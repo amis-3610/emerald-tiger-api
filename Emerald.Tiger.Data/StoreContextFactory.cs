@@ -11,8 +11,6 @@ namespace Emerald.Tiger.Data
             optionsBuilder.UseSqlite("Data Source=../Registrar.sqlite");
 
             return new StoreContext(optionsBuilder.Options);
-
-
         }
     }
 }
