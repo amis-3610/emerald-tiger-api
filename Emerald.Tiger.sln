@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Api", "Emerald.Tiger.Api\Emerald.Tiger.Api.csproj", "{437C6666-34D9-49DA-91A6-FBCC61B85B16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Api", "Emerald.Tiger.Api\Emerald.Tiger.Api.csproj", "{6B50A630-8334-494C-9F86-906A19F21855}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Domain", "Emerald.Tiger.Domain\Emerald.Tiger.Domain.csproj", "{CA84A4F7-12E2-4418-8DD7-10B9999A2E82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Data", "Emerald.Tiger.Data\Emerald.Tiger.Data.csproj", "{577DC330-E4FB-4FE4-A39D-F29FB9B04A48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Data", "Emerald.Tiger.Data\Emerald.Tiger.Data.csproj", "{BB427210-CBCE-408A-AF92-22641395805A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B970BCB1-6744-4ED9-A0A8-08C39D31CC79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Domain", "Emerald.Tiger.Domain\Emerald.Tiger.Domain.csproj", "{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,24 +18,17 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{437C6666-34D9-49DA-91A6-FBCC61B85B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{437C6666-34D9-49DA-91A6-FBCC61B85B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{437C6666-34D9-49DA-91A6-FBCC61B85B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{437C6666-34D9-49DA-91A6-FBCC61B85B16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA84A4F7-12E2-4418-8DD7-10B9999A2E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA84A4F7-12E2-4418-8DD7-10B9999A2E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA84A4F7-12E2-4418-8DD7-10B9999A2E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA84A4F7-12E2-4418-8DD7-10B9999A2E82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB427210-CBCE-408A-AF92-22641395805A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB427210-CBCE-408A-AF92-22641395805A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB427210-CBCE-408A-AF92-22641395805A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB427210-CBCE-408A-AF92-22641395805A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7A0DC61-CCAA-45BC-B476-A399CE82ABC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7A0DC61-CCAA-45BC-B476-A399CE82ABC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7A0DC61-CCAA-45BC-B476-A399CE82ABC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7A0DC61-CCAA-45BC-B476-A399CE82ABC3}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{E7A0DC61-CCAA-45BC-B476-A399CE82ABC3} = {B970BCB1-6744-4ED9-A0A8-08C39D31CC79}
+		{6B50A630-8334-494C-9F86-906A19F21855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B50A630-8334-494C-9F86-906A19F21855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B50A630-8334-494C-9F86-906A19F21855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B50A630-8334-494C-9F86-906A19F21855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{577DC330-E4FB-4FE4-A39D-F29FB9B04A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577DC330-E4FB-4FE4-A39D-F29FB9B04A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577DC330-E4FB-4FE4-A39D-F29FB9B04A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577DC330-E4FB-4FE4-A39D-F29FB9B04A48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
