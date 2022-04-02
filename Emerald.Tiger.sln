@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Data", "Emera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Domain", "Emerald.Tiger.Domain\Emerald.Tiger.Domain.csproj", "{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5EF2B50A-69E7-43F4-8D41-971E6705F944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerald.Tiger.Domain.Tests", "tests\Emerald.Tiger.Domain.Tests\Emerald.Tiger.Domain.Tests.csproj", "{4BBF5B8D-9543-4AE7-8196-B24630426465}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{223F6FB0-304B-462A-8EA9-EFB5A65CD26F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BBF5B8D-9543-4AE7-8196-B24630426465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BBF5B8D-9543-4AE7-8196-B24630426465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BBF5B8D-9543-4AE7-8196-B24630426465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BBF5B8D-9543-4AE7-8196-B24630426465}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4BBF5B8D-9543-4AE7-8196-B24630426465} = {5EF2B50A-69E7-43F4-8D41-971E6705F944}
 	EndGlobalSection
 EndGlobal
