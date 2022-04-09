@@ -18,3 +18,15 @@ Content-Type: application/json
     "brand": "Nike",
     "price": 129.99
 }
+
+### DELETE a Item to the Catalog collection
+curl --request DELETE \
+  --url https://localhost:7250/catalog/3 \
+  --header 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5UUTJPREk0TURCRFJrVkdRalJET1VRNE5EVTRNVE5FTnpBM1JFSTVRa00zTkVSRU9EbERSZyJ9.eyJpc3MiOiJodHRwczovL3NreWFya2l0ZWt0ZW4uYXV0aDAuY29tLyIsInN1YiI6IkV1VWJZeUgzaGJSRjZYYWw4RUREU1FsaFg0bUdOZVN4QGNsaWVudHMiLCJhdWQiOiJodHRwczovL2VtZXJhbGQtdGlnZXIiLCJpYXQiOjE2NDk1Mjk4NTAsImV4cCI6MTY0OTYxNjI1MCwiYXpwIjoiRXVVYll5SDNoYlJGNlhhbDhFRERTUWxoWDRtR05lU3giLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6W119.pyMlknKt-dWU8wWJaGcPHOair2ppF3SD1HYqA2TWj1noAGNx6pPed89fAop6ujw4HnRPW3Yfce9r0rPO1e1YmVFx-JULdEQEDJ3oXwZ0SU518-VGX8qXJLANtb4GhCyRTL5iI-FNJZtU4R23PCiPdmOOZbyFRhsTl1KnZ3OGHaUHjXuGoA4gOvt-0MgO5s1njLJ1MjEFwu9mha7zxjmRwumpM2vfKgVE27Xqo99EN3QOBAltmnED55OwkOQCG1eOSqM47rPNxU-nGvGV7DiLD6Ca8A3sUm_Wy_BGHmL8NxTKU3t5azZz6sd9CJbFjthfbterCUMSAReA6zg9mGsBpQ'
+
+
+### GET token from Auth0
+  curl --request POST \
+  --url https://skyarkitekten.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"EuUbYyH3hbRF6Xal8EDDSQlhX4mGNeSx","client_secret":"UsLYFbeTcz9LA8aQDKZ-GmHS32unuXTntZqbafh2eX31hXhBzd1qyVRzMtAbGjRJ","audience":"https://emerald-tiger","grant_type":"client_credentials"}'

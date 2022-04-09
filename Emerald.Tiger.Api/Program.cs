@@ -29,8 +29,8 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization(options =>
     {
-        options.AddPolicy("read:messages", policy =>
-            policy.Requirements.Add(new HasScopeRequirement("read:messages", authority)));
+        options.AddPolicy("delete:catalog", policy =>
+            policy.Requirements.Add(new HasScopeRequirement("delete:catalog", authority)));
     });
 
 builder.Services.AddDbContext<StoreContext>(options =>
@@ -50,7 +50,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseRouting();
 app.UseAuthorization();
 app.UseAuthentication();
 

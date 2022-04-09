@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Emerald.Tiger.Domain.Catalog;
 using Emerald.Tiger.Data;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Emerald.Tiger.Api.Controllers
 {
@@ -27,7 +28,7 @@ namespace Emerald.Tiger.Api.Controllers
         {
             var item = _db.Items.Find(id);
 
-            if(item == null)
+            if (item == null)
             {
                 return NotFound(id);
             }
@@ -46,15 +47,15 @@ namespace Emerald.Tiger.Api.Controllers
         public IActionResult PostRating(int id, Rating rating)
         {
             var item = _db.Items.Find(id);
-            
-            if(item == null)
+
+            if (item == null)
             {
                 return NotFound();
             }
-            
+
             item.AddRating(rating);
             _db.SaveChanges();
-            
+
             return Ok(item);
         }
 
@@ -62,12 +63,12 @@ namespace Emerald.Tiger.Api.Controllers
         public IActionResult Put(int id, Item item)
         {
 
-            if(id != item.Id)
+            if (id != item.Id)
             {
                 return BadRequest();
             }
 
-            if(_db.Items.Find(id) == null)
+            if (_db.Items.Find(id) == null)
             {
                 return NotFound();
             }
@@ -79,10 +80,11 @@ namespace Emerald.Tiger.Api.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize(Policy = "delete:catalog")]
         public IActionResult Delete(int id)
         {
             var item = _db.Items.Find(id);
-            
+
             if (item == null)
             {
                 return NotFound();
