@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Emerald.Tiger.Api.Security
 {
-    public class HasScopeHandler : AuthorizationHandler<HasScopeRequirements>
+    public class HasScopeHandler : AuthorizationHandler<HasScopeRequirement>
     {
-        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, HasScopeRequirements requirement)
+        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, HasScopeRequirement requirement)
         {
             // If user does not have the scope claim, get out of here. 
 
