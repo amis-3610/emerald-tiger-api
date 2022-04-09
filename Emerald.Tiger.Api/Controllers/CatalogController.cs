@@ -80,7 +80,7 @@ namespace Emerald.Tiger.Api.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        [Authorize(Policy = "delete:catalog")]
+        [Authorize]
         public IActionResult Delete(int id)
         {
             var item = _db.Items.Find(id);
