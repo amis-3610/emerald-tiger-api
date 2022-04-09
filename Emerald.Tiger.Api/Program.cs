@@ -30,7 +30,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization(options =>
     {
         options.AddPolicy("delete:catalog", policy =>
-            policy.Requirements.Add(new HasScopeRequirement("delete:catalog", authority)));
+            policy.RequireAuthenticatedUser().RequireClaim("scope", "delete:catalog"));
     });
 
 builder.Services.AddDbContext<StoreContext>(options =>
