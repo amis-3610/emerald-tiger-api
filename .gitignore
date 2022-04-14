@@ -451,4 +451,4 @@ $RECYCLE.BIN/
 
 
 # Project databasen
-*sqlite
+*.sqlite
