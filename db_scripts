@@ -1,0 +1,42 @@
+CREATE TABLE [dbo].[Items] (
+    [Id]          INT           NOT NULL,
+    [Name]        VARCHAR (32)  NOT NULL,
+    [Description] VARCHAR (500) NOT NULL,
+    [Brand]       VARCHAR (32)  NOT NULL,
+    [Price]       MONEY         NOT NULL,
+    CONSTRAINT [PK_Items] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Ratings] (
+    [Id]          INT           NOT NULL,
+    [ItemId]      INT           NOT NULL,
+    [Stars]       INT           NOT NULL,
+    [UserName]    VARCHAR (32)  NOT NULL,
+    [Review]      VARCHAR (500) NOT NULL,
+    CONSTRAINT [PK_Ratings] PRIMARY KEY CLUSTERED ([Id] ASC)
+    CONSTRAINT [FK_Ratings_Items] FOREIGN KEY ([ItemId]) REFERENCES [dbo].[Items] ([Id])
+);
+
+
+INSERT INTO [dbo].[Items] ([Id], [Name], [Description], [Brand], [Price]) 
+VALUES (1, 'Ohio State T-Shirt', 'Red Ohio State T-Shirt, perfect for gamedays.', 'Nike', 30.00);
+
+INSERT INTO [dbo].[Items] ([Id], [Name], [Description], [Brand], [Price]) 
+VALUES (2, 'Ohio State Shorts', 'Basic shorts that cost more beacuse of licensing.', 'Nike', 50.00);
+
+INSERT INTO [dbo].[Items] ([Id], [Name], [Description], [Brand], [Price]) 
+VALUES (3, 'Ohio State Hat', 'Black Snap-back.', 'Nike', 30.00);
+
+INSERT INTO [dbo].[Items] ([Id], [Name], [Description], [Brand], [Price]) 
+VALUES (4, 'Ohio State Jersey', 'Home and away jerseys available', 'Nike', 90.00);
+
+
+INSERT INTO [dbo].[Ratings] ([Id], [ItemId], [Stars], [UserName], [Review])
+VALUES (1, 1, 5, 'Joe Smith', 'Great fit and quality.');
+
+INSERT INTO [dbo].[Ratings] ([Id], [ItemId], [Stars], [UserName], [Review])
+VALUES (2, 1, 4, 'Jack Tatum Jr.', 'Go Bucks! Go Bucks!');
+
+INSERT INTO [dbo].[Ratings] ([Id], [ItemId], [Stars], [UserName], [Review])
+VALUES (3, 1, 1, 'Lloyd Carr', 'Oh How I Hate Ohio State');
