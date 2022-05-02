@@ -12,9 +12,6 @@ string authority = builder.Configuration["Auth0:Authority"] ??
 string audience = builder.Configuration["Auth0:Audience"] ??
     throw new ArgumentNullException("Auth0:Audience");
 
-string storeConnectionString = builder.Configuration.GetConnectionString("StoreConnection") ??
-    throw new ArgumentNullException("ConnectionString:StoreConnection");
-
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -37,15 +34,14 @@ builder.Services.AddAuthorization(options =>
     });
 
 builder.Services.AddDbContext<StoreContext>(options =>
-    options.UseSqlServer(storeConnectionString,
+    options.UseSqlite("Data Source=../Registrar.sqlite",
     b => b.MigrationsAssembly("Emerald.Tiger.Api"))
 );
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:3000",
-            "https://brave-glacier-0865b2f0f.1.azurestaticapps.net")
+        builder.WithOrigins("http://localhost:3000")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
